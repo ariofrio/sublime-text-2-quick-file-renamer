@@ -1,5 +1,6 @@
 import os
 import shutil
+import sublime
 import sublime_plugin
 
 
@@ -30,16 +31,16 @@ class QuickRenameCommand(sublime_plugin.WindowCommand):
 
     def validateFileName(self, view, old_file, new_file):
         if len(new_file) is 0:
-            print("ABORT: No new filename given.")
+            sublime.error_message("Error: No new filename given.")
             return False
         if view.is_loading():
-            print("ABORT: The file is still loading.")
+            sublime.error_message("Error: The file is still loading.")
             return False
         if view.is_read_only():
-            print("ABORT: The file is read-only.")
+            sublime.error_message("Error: The file is read-only.")
             return False
         if(new_file == old_file):
-            print("ABORT: The new file name was the same as the old one.")
+            sublime.error_message("Error: The new file name was the same as the old one.")
             return False
         return True
 
