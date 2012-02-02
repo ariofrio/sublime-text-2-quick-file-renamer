@@ -1,0 +1,7 @@
+[
+    {
+        "caption": "Quick Rename: Rename Current File",
+        "command": "quick_rename",
+        "args": {}
+    }
+]
