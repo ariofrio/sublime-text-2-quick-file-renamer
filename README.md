@@ -9,4 +9,5 @@ Press `ctrl+shift+r` then enter your new filename!
 
 The code is available on [GitHub](https://github.com/wulftone/sublime-text-2-quick-file-renamer)!
 
-Credit goes to [a.stenlund@gmail.com](http://sublime-text-community-packages.googlecode.com/svn/trunk/QuickRename/) for making the first version for ST1.
+Credit goes to [a.stenlund@gmail.com]() for making the
+[first version](http://sublime-text-community-packages.googlecode.com/svn/trunk/QuickRename/) for ST1.
