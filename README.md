@@ -1,6 +1,6 @@
 #Sublime Text 2 Quick File Renamer
 
-A simple ST2 plugin to help you rename your files
+A simple ST2 plugin to help you rename your files. It works with absolute paths AND relative paths.
 
 ###Usage
 

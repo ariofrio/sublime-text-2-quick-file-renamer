@@ -3,9 +3,7 @@ import shutil
 import sublime
 import sublime_plugin
 
-
 class QuickRenameCommand(sublime_plugin.WindowCommand):
-
     def run(self):
         view = self.window.active_view()
         file_name = self.get_file_name(view)
@@ -16,11 +14,12 @@ class QuickRenameCommand(sublime_plugin.WindowCommand):
 
     def rename(self, view, new_file):
         old_file = view.file_name()
+
+        new_file = os.path.join(os.path.dirname(old_file), new_file)
         if old_file is None:
             print("ABORT: The file hasn't been saved to disk yet. Performing regular save instead of rename.")
             view.window().run_command("save")
             return
-        old_file = old_file.rsplit(os.sep, 1)[1]
         if not self.validateFileName(view, old_file, new_file):
             return
         if view.is_dirty():
